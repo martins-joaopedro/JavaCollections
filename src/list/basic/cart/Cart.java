@@ -4,7 +4,11 @@ import java.util.ArrayList;
 
 public class Cart {
     
-    private ArrayList<Item> items = new ArrayList<>();
+    private ArrayList<Item> items;
+
+    Cart() {
+        this.items  = new ArrayList<>();
+    }
 
     public void addItem(String name, double price, int amount) {
         //iterate the list looking for this item to increase its value

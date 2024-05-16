@@ -6,7 +6,11 @@ import java.util.List;
 
 public class SortNumber {
 
-    private List<Integer> numbersList = new ArrayList<Integer>();
+    private List<Integer> numbersList;
+
+    SortNumber() {
+        this.numbersList = new ArrayList<Integer>();
+    }
 
     public void addNumber(int number) {
         this.numbersList.add(number);

@@ -4,7 +4,11 @@ import java.util.ArrayList;
 
 public class ToDoList {
     
-    private ArrayList<Task> items = new ArrayList<>();
+    private ArrayList<Task> items;
+
+    ToDoList() {
+        this.items = new ArrayList<Task>();
+    }
 
     public void addTask(String description) {
         items.add(new Task(description));

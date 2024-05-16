@@ -4,15 +4,19 @@ import java.util.ArrayList;
 
 public class BookCatalog {
     
-    private ArrayList<Book> books = new ArrayList<>();
+    private ArrayList<Book> books;
 
+    BookCatalog() {
+        this.books = new ArrayList<Book>();
+    }
+    
     public void addBook(String title, String author, int yearReleased) {
         books.add(new Book(author, title, yearReleased));
     }
 
     public ArrayList<Book> findByAuthor(String author) {
         System.out.println("Busca por: " + author);
-        ArrayList<Book> search = new ArrayList<>();
+        ArrayList<Book> search = new ArrayList<Book>();
         for(Book b : books) 
             if(b.getAuthor() == author)
                 search.add(b);
@@ -22,7 +26,7 @@ public class BookCatalog {
 
     public ArrayList<Book> searchByYearInterval(int start, int end) {
         
-        ArrayList<Book> search = new ArrayList<>();
+        ArrayList<Book> search = new ArrayList<Book>();
         for(Book b : books)
             if(b.getYearReleased() >= start && b.getYearReleased() <= end )
                 search.add(b);

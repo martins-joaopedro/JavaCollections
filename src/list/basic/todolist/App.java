@@ -2,6 +2,7 @@ package todolist;
 
 public class App {
     public static void main(String[] args) {
+        
         ToDoList todo = new ToDoList();
 
         todo.addTask("Lavar roupa");
