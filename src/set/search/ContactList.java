@@ -21,12 +21,12 @@ public class ContactList {
     }
 
     public Set<Contact> findByName(String name) {
-        Set<Contact> contacts = new HashSet<Contact>();
+        Set<Contact> search = new HashSet<Contact>();
         for(Contact c : contacts)
             if(c.getName().startsWith(name)) {
-                contacts.add(c);
+                search.add(c);
             }       
-        return contacts;         
+        return search;         
     }
 
     public Contact updateContactNumber(String name, int number) {
